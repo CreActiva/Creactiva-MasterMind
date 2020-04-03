@@ -1,0 +1,77 @@
+@keyframes to-black {
+  to {
+    background-color: var(--black);
+  }
+}
+
+@keyframes to-blue {
+  to {
+    background-color: var(--blue);
+  }
+}
+
+@keyframes to-darkblue {
+  to {
+    background-color: var(--darkblue);
+  }
+}
+
+@keyframes to-yellow {
+  to {
+    background-color: var(--yellow);
+  }
+}
+
+@keyframes to-orange {
+  to {
+    background-color: var(--orange);
+  }
+}
+
+@keyframes to-gray {
+  to {
+    background-color: var(--gray);
+  }
+}
+
+@keyframes to-white {
+  to {
+    background-color: var(--white);
+  }
+}
+
+@keyframes to-left {
+  from {
+    transform: translateX(-25px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes to-right {
+  from {
+    transform: translateX(25px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes to-top {
+  from {
+    transform: translateY(-25px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes to-bottom {
+  from {
+    transform: translateY(25px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
