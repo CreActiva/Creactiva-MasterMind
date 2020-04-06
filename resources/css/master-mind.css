@@ -21,16 +21,6 @@ header {
   background-size: contain;
 }
 /* ====== */
-/* Sección 1 */
-#S1 {
-  background: url('../img/site/master-mind/sky.webp') center no-repeat, var(--black);
-  background-size: cover;
-}
-
-.no-webp #S1 {
-  background: url('../img/site/master-mind/sky.png') center no-repeat, var(--black);
-}
-/* ========= */
 #S2::before {
   content: " ";
   padding: 20px;
