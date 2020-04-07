@@ -41,9 +41,11 @@
   --blue:     rgb(0, 44, 84);
   --darkblue: rgb(22, 37, 61);
   --violet:   rgb(96, 70, 170);
+  --purple:   #3E0F73;
   --yellow:   rgb(239, 181, 9);
   --orange:   rgb(242, 101, 33);
   --grey:     rgb(178, 178, 178);
+  --gray:     rgb(178, 178, 178);
   --white:    rgb(255, 255, 255);
 
   --font-family:'Helvetica';
@@ -110,15 +112,20 @@ body {
 }
 
 
-h1, h3, h4, h5, h6,
-.h1, .h3, .h4, .h5, .h6 {
-  font-weight: 1000 !important;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2,.h3, .h4, .h5, .h6 {
   margin-bottom: 0;
   font-weight: 500;
   line-height: 1.2;
 }
-h2, .h2{
-  font-weight: 800 !important;
+h1, h3, h4, h5,
+.h1, .h3, .h4, .h5 {
+  font-weight: 1000;
+}
+
+h2, .h2,
+h6, .h6{
+  font-weight: 800;
 }
 h1, .h1 {
   font-size: 4.25rem;
@@ -209,4 +216,10 @@ p {
 .border-case{
   border-left:4px solid var(--white);
   padding: 5rem;
+}
+
+.border-violet-radial {
+  border: 20px solid transparent !important;
+  border-image: radial-gradient( circle, var(--violet), var(--purple))1 !important;    
+  box-shadow: 0 0 20px var(--black) !important;
 }

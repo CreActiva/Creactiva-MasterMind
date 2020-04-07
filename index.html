@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./vendors/to-animation/to-animation.css">
   <link rel="stylesheet" href="./vendors/modal/modal.css">
   <link rel="stylesheet" href="./vendors/glitch/glitch.css">
+  <link rel="stylesheet" href="./vendors/form/form.css">
   
   <link rel="stylesheet" href="./resources/css/master-mind.css">
 
@@ -46,21 +47,37 @@
 <body class="demo-3">
   <!-- Ventana Modal -->
   <div class="modal">
-    <div class="modal-content">
+    <div class="modal-content border-violet-radial">
       <!-- <span class="close-button">&#10006;</span> -->
-      <h1 class="text-center pb-1">Suscríbete ahora</h1>
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y apellido" maxlength="80" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="Número Telefónico" maxlength="80" required>
-        </div>
-        <div class="form-group">
-          <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email" maxlength="80" required>
-        </div>
-        <input type="submit" value="Enviar" class="btn btn-purple w-100">
-      </form>
+      <div class="modal__item">
+        <!-- <picture>
+          <source src="./resources/img/site/master-mind/persona-saltando-playa.webp" alt="persona saltando en playa">
+          <img src="./resources/img/site/master-mind/persona-saltando-playa.jpg" alt="persona saltando en playa">
+        </picture> -->
+      </div>
+      <div class="modal__item">
+        <h1 class="text-center">Suscríbete ahora</h1>
+        <form id="modal__form" class="d-flex justify-content-center flex-wrap">
+          <span class="input input--creactiva">
+            <input class="input__field input__field--creactiva" type="text" id="master-input-1" maxlength="80" required />
+            <label class="input__label input__label--creactiva" for="master-input-1" data-content="Nombre y Apellido">
+              <span class="input__label-content input__label-content--creactiva">Nombre y Apellido</span>
+            </label>
+          </span>
+          <span class="input input--creactiva">
+            <input class="input__field input__field--creactiva" type="email" id="master-input-2" maxlength="80" required />
+            <label class="input__label input__label--creactiva" for="master-input-2" data-content="Email">
+              <span class="input__label-content input__label-content--creactiva">Email</span>
+            </label>
+          </span>
+          <span class="input input--creactiva">
+            <input class="input__field input__field--creactiva" type="tel" id="master-input-3" maxlength="80" required/>
+            <label class="input__label input__label--creactiva" for="master-input-3" data-content="Teléfono">
+              <span class="input__label-content input__label-content--creactiva">Teléfono</span>
+            </label>
+          </span>
+          <input type="button" value="Enviar" class="btn btn-purple w-50">
+        </form>
       </div>
     </div>
   </div>
