@@ -48,7 +48,7 @@
   <!-- Ventana Modal -->
   <div class="modal">
     <div class="modal-content border-violet-radial">
-      <!-- <span class="close-button">&#10006;</span> -->
+      <span class="close-button">&#10006;</span>
       <div class="modal__item">
         <!-- <picture>
           <source src="./resources/img/site/master-mind/persona-saltando-playa.webp" alt="persona saltando en playa">
@@ -57,26 +57,29 @@
       </div>
       <div class="modal__item">
         <h1 class="text-center">Suscríbete ahora</h1>
-        <form id="modal__form" class="d-flex justify-content-center flex-wrap">
+        <form id="modal__form" class="d-flex justify-content-center flex-wrap" name="FormularioMasterMind">
           <span class="input input--creactiva">
-            <input class="input__field input__field--creactiva" name="Nombre" type="text" id="master-input-1" maxlength="80" required />
+            <input class="input__field input__field--creactiva" name="Nombre" type="text" id="master-input-1" maxlength="60" required />
             <label class="input__label input__label--creactiva" for="master-input-1" data-content="Nombre y Apellido">
               <span class="input__label-content input__label-content--creactiva">Nombre y Apellido</span>
             </label>
           </span>
           <span class="input input--creactiva">
-            <input class="input__field input__field--creactiva" name="Email" type="email" id="master-input-2" maxlength="80" required />
+            <input class="input__field input__field--creactiva" name="Email" type="email" id="master-input-2" maxlength="50" required />
             <label class="input__label input__label--creactiva" for="master-input-2" data-content="Email">
               <span class="input__label-content input__label-content--creactiva">Email</span>
             </label>
           </span>
           <span class="input input--creactiva">
-            <input class="input__field input__field--creactiva" name="Telefono" type="tel" id="master-input-3" maxlength="80" required/>
+            <input class="input__field input__field--creactiva" name="Telefono" type="number" id="master-input-3" required/>
             <label class="input__label input__label--creactiva" for="master-input-3" data-content="Teléfono">
               <span class="input__label-content input__label-content--creactiva">Teléfono</span>
             </label>
           </span>
-          <input type="button" value="Enviar" class="btn btn-purple w-50">
+          <input type="submit" value="Enviar" class="btn btn-purple w-50">
+          <small id="form__small" class="text-muted d-none text-light w-50">
+            Comprobando los datos que nos suministraste. Esto puede tardar unos segundos.
+          </small>
         </form>
       </div>
     </div>
@@ -131,56 +134,94 @@
           <h2 class="font-weight-1000">Primeros Invitados</h2>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 to-left">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/eduardo-marti.webp" alt="Mariela Sanchez" class="img-fluid d-block mx-auto">
-            <img src="./resources/img/site/master-mind/invitados/eduardo-marti.png" alt="Mariela Sanchez" class="img-fluid d-block mx-auto">
-          </picture>
-          <h6 class="mb-5 mx-auto">Psicopedagoga<br>Lic Educación</h6>
-          <h3 class="mt-3 mx-auto">Mariela Sánchez</h3>
-          <p>Estrategias de trabajo educativo desde casa.</p>
-          <h6>07.04.2020</h6>
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-4 to-left align-self-center">
+          <div class='dropdown'>
+            <div class='title pointerCursor'>
+              <button class="fa fa-plus-less">
+                <!-- Añadir dos show para estár activo -->
+                <span class="show"></span><span class="show"></span></button>
+              <h6 class="d-inline-flex">Temas</h6>
+            </div>
+            <!-- Quita el hide para estar activo -->
+            <div class='menu flex-column justify-content-start'>
+              <p>Tema 1</p>
+              <p>Tema 2</p>
+              <p>Tema 3</p>
+            </div>
+          </div>
         </div>
         <div class="col-lg-4 to-right">
           <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/eduardo-marti.webp" alt="Eduardo Martí" class="img-fluid d-block mx-auto">
-            <img src="./resources/img/site/master-mind/invitados/eduardo-marti.png" alt="Eduardo Martí" class="img-fluid d-block mx-auto">
+            <source srcset="./resources/img/site/master-mind/invitados/mariela-temp1.webp" alt="Mariela Sánchez" class="img-fluid d-block mx-auto">
+            <img src="./resources/img/site/master-mind/invitados/mariela-temp1.png" alt="Mariela Sánchez" class="img-fluid d-block mx-auto">
           </picture>
-          <h6 class="mb-5">Autor  y Formador <br>de Lideres</h6>
-          <h3 class="mt-3 mx-auto">Eduardo Martí</h3>
-          <p>Estrategias de trabajo educativo desde casa.</p>
+          <h6>Psicopedagoga</h6>
+          <h3 class="mt-3 mx-auto">Mariela Sánchez</h3>
+          <p>Cole en Casa.</p>
           <h6>07.04.2020</h6>
         </div>
       </div>
-      <div class="row justify-content-center pt-3 pb-3">
-        <div class="col-lg-4 to-left">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/invitado.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-            <img src="./resources/img/site/master-mind/invitados/invitado.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-          </picture>
-          <h3 class="mt-3">Saúl González</h3>
-          <p>Estrategias de trabajo educativo desde casa.</p>
-          <h6>07.04.2020</h6>
+      <div class="carousel--participantes">
+        <div class="carousel__slide">
+          <div class="carousel__control control__prev" data-slide-number="0">&nbsp;&#8249;</div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/zaida.webp" alt="Zaida Márquez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/zaida.png" alt="Zaida Márquez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Zaida<br>Márquez</h3>
+            <p>Objetivos bien Formulados.</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/francisco.webp" alt="Francisco Sánchez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/francisco.png" alt="Francisco Sánchez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Francisco<br>Sánchez</h3>
+            <p>Herramientas para la productividad Online.</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/rafael.webp" alt="Rafael Rodríguez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/rafael.png" alt="Rafael Rodríguez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Rafael<br>Rodríguez</h3>
+            <p>Habla a través de tu marca en las redes sociales.</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/saul.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/saul.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Saúl<br>González</h3>
+            <p>Tu empresa en el mundo digital.</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/equipo.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/equipo.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Mariana + Ricardo</h3>
+            <p>Aprendizaje y acompañamiento virtual E-learning.</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__item px-1">
+            <picture>
+              <source srcset="./resources/img/site/master-mind/invitados/equipo.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+              <img src="./resources/img/site/master-mind/invitados/equipo.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+            </picture>
+            <h3 class="mt-3">Equipo de CreActiva</h3>
+            <p>Sistemas de aprendizaje en linea - ¿Cuál usar y por qué?</p>
+            <h6>07.04.2020</h6>
+          </div>
+          <div class="carousel__control control__next" data-slide-number="2">&nbsp;&#8250;</div>
         </div>
-        <div class="col-lg-4 to-top">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/invitado.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-            <img src="./resources/img/site/master-mind/invitados/invitado.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-          </picture>
-          <h3 class="mt-3">Saúl González</h3>
-          <p>Estrategias de trabajo educativo desde casa.</p>
-          <h6>07.04.2020</h6>
-        </div>
-        <div class="col-lg-4 to-right">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/invitado.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-            <img src="./resources/img/site/master-mind/invitados/invitado.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-          </picture>
-          <h3 class="mt-3">Saúl González</h3>
-          <p>Estrategias de trabajo educativo desde casa.</p>
-          <h6>07.04.2020</h6>
-        </div>
+        <div class="carousel__indicator"></div>
       </div>
     </div>
   </div>
@@ -192,10 +233,10 @@
           <h5 class="border-bottom mb-5 pb-2 to-left">Los Master Mind han existido desde hace mucho tiempo.<br>Nosotros solo promovemos el espacio.</h5>
           <p>Un Master Mind es un conversatorio rodeado de personas que tienen objetivos así como tú.<br>En los Martes Mind podrás entrar como oyente y escuchar consejos y experiencias de personas profesionales.<br>Además de poder relacionarte con otras personas.</p>
         </div>
-        <div class="col-lg-5 text-center to-right">
+        <div class="col-xl-3 col-lg-5 text-center to-right">
           <h1 class="display">100</h1>
           <h5 class="pb-1">Puestos Virtuales <!--  Disponibles para la temporada 1 --></h5>
-          <button type="button" class="btn btn-purple btn-modal">Suscribirme</button>
+          <button type="button" class="btn btn-dark btn-modal">Suscribirme</button>
         </div>
       </div>
       <div class="row justify-content-center text-center py-5 metodo">
@@ -229,8 +270,14 @@
           <div class="carousel__control control__next" data-slide-number="2">&nbsp;&#8250;</div>
         </div>
         <div class="carousel__indicator"></div>
-
       </div>
+
+
+
+
+
+
+
     </div>
   </div>
   <!--S4 - SUSCRIBETE-->
@@ -247,7 +294,7 @@
           <h3>La temporada 1 comienza en:</h3>
           <div id="clock"></div> 
         </div>
-        <div class="col-lg-5 text-center to-right">
+        <div class="col-xl-3 col-lg-5 text-center to-right">
             <h1 class="display">100</h1>
             <h5 class="pb-1">Puestos Virtuales <!--  Disponibles para la temporada 1 --></h5>
             <button type="button" class="btn btn-purple btn-modal">Suscribirme</button>
@@ -288,6 +335,8 @@
   </div>
   <!--SCRIPTS-->
   <script src="./vendors/dropdown/dropdown.js"></script>
+  <script src="./vendors/intersection-observer/intersection-observer.js"></script>
+  <script src="./vendors/ajax/ajax.js"></script>
   <script src="./vendors/carousel/carousel.js"></script>
   <script src="./vendors/to-animation/to-animation.js"></script>
   <script src="./vendors/modal/modal.js"></script>

@@ -14,5 +14,5 @@ function windowOnClick(event) {
 }
 triggerBtn.forEach(el => el.addEventListener('click', toggleModal))
 trigger.forEach(el => el.addEventListener('click', toggleModal));
-// closeButton.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowOnClick);

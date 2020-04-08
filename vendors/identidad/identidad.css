@@ -60,6 +60,16 @@
 *::after {
   box-sizing: border-box;
 }
+/* Input numerico boton de aumentar y decrementar */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* ============================================== */
 
 html {
   font-family: sans-serif;

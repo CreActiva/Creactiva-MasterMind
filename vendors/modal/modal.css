@@ -35,17 +35,15 @@
   font-size: 1.5rem;
   float: right;
   width: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   text-align: center;
   cursor: pointer;
-  border-radius: 100%;
-  background-color: var(--white);
   transition: all 0.5s ease;
 }
 
 .close-button:hover {
   background-color: var(--gray);
-  color: var(--white);
+  color: var(--black);
 }
 
 .show-modal {

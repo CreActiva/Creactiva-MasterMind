@@ -13,6 +13,22 @@ body {
 .input__field--creactiva:focus + .input__label--creactiva::before{
 	background-color: var(--violet);
 }
+.fa-plus-less > span {
+  background: var(--white);
+}
+
+.dropdown__menu::-webkit-scrollbar {
+  width: 0;
+}
+
+.dropdown__menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown__menu::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
 /* Modal */
 .modal-content{
   flex-direction: row;
@@ -27,14 +43,20 @@ body {
   flex: 0 0 50%;
   height: auto;
 }
-
-.modal__item:nth-child(1){
+.close-button {
+  width: auto;
+  height: auto;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+.modal__item:nth-child(2){
   border-right: 1px solid ;
   background: url(../img/site/master-mind/persona-saltando-playa.webp) center no-repeat;
   background-size: cover;
   height: 100%;
 }
-.no-webp .modal__item:nth-child(1){
+.no-webp .modal__item:nth-child(3){
   border-right: 1px solid ;
   background: url(../img/site/master-mind/persona-saltando-playa.jpg) center no-repeat;
   background-size: cover;
@@ -61,13 +83,13 @@ body {
     align-items: center;
     padding: 1rem;
   }
-  .modal__item:nth-child(1){
+  .modal__item:nth-child(2){
     display: none;
     height: 100%;
     align-self: start;
     order: 2;
   }
-  .modal__item:nth-child(2){
+  .modal__item:nth-child(3){
     order: 1;
     flex: 1;
   }
@@ -86,9 +108,18 @@ header {
 .no-webp header{
   background: url('../img/site/master-mind/imagen-teclas.png') center 10rem no-repeat, var(--black);
 }
+@media (max-width: 991.98px) {
+  header {
+    background-position: center;
+  }
+}
+
 .glitch--style-5 .glitch__img {
   background: url(../img/site/master-mind/header.png) center no-repeat;
   background-size: contain;
+}
+.glitch--style-5 .glitch__img{
+  background: url(../img/site/master-mind/header.png) center no-repeat;
 }
 /* ====== */
 #S2::before {
@@ -183,7 +214,9 @@ header {
     left: 12rem;
   }
 }
-
+.carousel--participantes picture {
+  z-index: 1;
+}
 /* ========= */
 /* Sección 3 */
 .metodo::after, .metodo::before {
