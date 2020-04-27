@@ -1,4 +1,4 @@
-function ajax({ url, method = 'GET', async = true, done = () => {}, error = () => {}, responseType = 'json' }) {
+function ajax({ url, method = 'GET', async = true, done = () => {}, error = () => {}, responseType = 'json', data = {} }) {
   function status(readyState) {
     switch(readyState) {
       case 0: return 'uninitilized'
@@ -8,20 +8,22 @@ function ajax({ url, method = 'GET', async = true, done = () => {}, error = () =
       case 4: return 'completed'
     }
   }
-  const request = new XMLHttpRequest()
-  request.responseType = responseType
-  console.log(status(request.readyState), request.readyState)
+  const request = new XMLHttpRequest();
+  request.responseType = responseType;
+  console.log(status(request.readyState), request.readyState);
 
   request.onreadystatechange = () => {
-    console.log(status(request.readyState), request.readyState)
+    console.log(status(request.readyState), request.readyState);
     if (request.readyState === 4) {
       if (request.status === 200) {
-        done(request.response)
+        done(request.response);
       } else {
-        error(request.status)
+        error(request.status);
       }
     }
   }
-  request.open(method, url, async)
-  request.send(null)
+  request.open(method, url, async);
+  request.setRequestHeader("Content-Type", "application/"+responseType+";charset=UTF-8");
+  (method === 'GET')? request.send(null): request.send(( JSON.stringify(data) ));
+
 }

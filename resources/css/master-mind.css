@@ -4,6 +4,21 @@
 .overflow-hidden{
   overflow: hidden;
 }
+@media (min-width: 1200px)   {
+  .indicator__container {
+    width: 8rem;
+  }
+} 
+.carousel--participantes .control__prev{
+  left: 5rem;
+} 
+.carousel--participantes .control__next{
+  right: 5rem;
+}
+.carousel__control{
+  width: 1.5rem
+}
+
 body {
   color: var(--white);
 }
@@ -13,8 +28,8 @@ body {
 .input__field--creactiva:focus + .input__label--creactiva::before{
 	background-color: var(--violet);
 }
-.fa-plus-less > span {
-  background: var(--white);
+.fa-plus-less span{
+  background: var(--orange);
 }
 
 .dropdown__menu::-webkit-scrollbar {
