@@ -21,3 +21,9 @@ input.addEventListener('input', function(){
   if (this.value.length > 30) this.value = this.value.slice(0,30); 
 })
 // ====================================================
+var input = document.querySelector("#master-input-3");
+window.intlTelInput(input, {
+  initialCountry: 've',
+  nationalMode: true,
+  utilsScript: './vendors/intl-tel-input/js/utils.js',
+});

@@ -1,6 +1,4 @@
-* {
-  overflow-x: hidden;
-}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -9,6 +7,15 @@
     width: 8rem;
   }
 } 
+/* International Telephone Input */
+.iti__flag {background-image: url("../../vendors/intl-tel-input/img/flags.png");}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../../vendors/intl-tel-input/img/flags@2x.png");}
+}
+.iti__country-name {
+  display: none !important;
+}
+/* ============================= */
 .carousel--participantes .control__prev{
   left: 5rem;
 } 
