@@ -1,5 +1,5 @@
 // Activar contador
-var contador = new CountDown('#clock', 'Apr 28 2020 18:00:00 GMT-0400', '¡Comenzamos!', true);
+var contador = new CountDown('#clock', 'May 12 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
 // ================
 // Carousel
 var carouselHTML = document.querySelector('.carousel');
