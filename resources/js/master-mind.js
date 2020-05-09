@@ -24,6 +24,9 @@ input.addEventListener('input', function(){
 var input = document.querySelector("#master-input-3");
 window.intlTelInput(input, {
   initialCountry: 've',
-  nationalMode: true,
+  nationalMode: false,
   utilsScript: './vendors/intl-tel-input/js/utils.js',
+  preferredCountries: ['ve', 'us'],
+  preventInvalidDialCodes: true
+  // separateDialCode: true
 });
