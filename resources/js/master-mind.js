@@ -1,3 +1,11 @@
+function removeSpace(a){
+  var aux = 0;
+  for(var i = 0; a[i]; i++ ){
+    if( a[i] != ' ') a[aux++] = a[i];
+  } 
+  return a;
+}
+
 // Activar contador
 var contador = new CountDown('#clock', 'May 12 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
 // ================
@@ -30,3 +38,11 @@ window.intlTelInput(input, {
   preventInvalidDialCodes: true
   // separateDialCode: true
 });
+// Verificar y luego realizar envio en formulario
+form.addEventListener('submit', e =>{
+  e.preventDefault();
+  input.value = input.value.replace(/ /g, '');
+  input.value = input.value.replace(/-/g, '');
+  form.submit();
+})
+// =============================================
