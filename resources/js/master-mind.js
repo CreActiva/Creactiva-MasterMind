@@ -1,11 +1,3 @@
-function removeSpace(a){
-  var aux = 0;
-  for(var i = 0; a[i]; i++ ){
-    if( a[i] != ' ') a[aux++] = a[i];
-  } 
-  return a;
-}
-
 // Activar contador
 var contador = new CountDown('#clock', 'May 12 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
 // ================
