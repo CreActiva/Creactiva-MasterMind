@@ -1,5 +1,5 @@
 // Activar contador
-var contador = new CountDown('#clock', 'May 12 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
+var contador = new CountDown('#clock', 'May 19 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
 // ================
 // Carousel
 var carouselHTML = document.querySelector('.carousel');
@@ -18,8 +18,15 @@ var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideIt
 var form = document.forms['FormularioMasterMind'];
 var input=  form.elements[2];
 input.addEventListener('input', function(){
-  if (this.value.length > 30) this.value = this.value.slice(0,30); 
-})
+  if (this.value.lenght > 30) this.value = this.value.slice(0,30);
+  if(!(/^\+/.test(this.value)) && (this.value.length <= 1)) { // Verifica el primer caracter
+   this.value = this.value.slice(0,(this.value.length - 1));
+  }
+  if (!(/^\+(\d*$)/.test(this.value)) && (this.value.length > 1) ){ // Verifica el segundo caracter
+     this.value = this.value.slice(0,(this.value.length - 1));
+  }
+});
+
 // ====================================================
 var input = document.querySelector("#master-input-3");
 window.intlTelInput(input, {
@@ -27,14 +34,17 @@ window.intlTelInput(input, {
   nationalMode: false,
   utilsScript: './vendors/intl-tel-input/js/utils.js',
   preferredCountries: ['ve', 'us'],
-  preventInvalidDialCodes: true
+  preventInvalidDialCodes: true,
+  customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+    selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/ |-|(|)/g, '');
+    return  selectedCountryPlaceholder;
+  },
   // separateDialCode: true
 });
 // Verificar y luego realizar envio en formulario
 form.addEventListener('submit', e =>{
   e.preventDefault();
-  input.value = input.value.replace(/ /g, '');
-  input.value = input.value.replace(/-/g, '');
+  input.value = input.value.replace(/ |-|(|)/g, '');
   form.submit();
-})
+});
 // =============================================
