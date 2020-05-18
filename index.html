@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Martes Mind | creActiva</title>
   <link rel="stylesheet" href="./vendors/identidad/identidad.css">
   <link rel="stylesheet" href="./vendors/bootstrap/bootstrap.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./vendors/modal/modal.css">
   <link rel="stylesheet" href="./vendors/glitch/glitch.css">
   <link rel="stylesheet" href="./vendors/form/form.css">
-  <link rel="stylesheet" href="./vendors/intl-tel-input/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="./vendors/intl-tel-input/css/intlTelInput.css">
   
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163772121-1"></script>
@@ -77,16 +77,14 @@
       <span class="close-button">&#10006;</span>
       <div class="modal__item align-items-center justify-content-center px-lg-1 px-0 d-flex">
           <ul>
-            <li class="pb-1"><span class="text-primary"> Martes 5 05</span> - Cole en Casa - Mariela Sánchez.</li>
-            <li class="pb-1"><span class="text-primary"> Martes 21 04</span> -  Objetivos bien Formulados - Zaida Márquez.</li>
-            <li class="pb-1"><span class="text-primary"> Miércoles 22 04</span> - Herramientas para la productividad Online - Francisco Sánchez.</li>
-            <li class="pb-1"><span class="text-primary"> Jueves 23 04</span> - Habla a través de tu marca en las redes sociales - Rafael Rodríguez.</li>
-            <li class="pb-1"><span class="text-primary"> Viernes 24 04</span> -  Tu empresa en el mundo digital - Saúl González.</li>
-            <li class="pb-1"><span class="text-primary"> Sábado 25 04</span> -  Aprendizaje y acompañamiento virtual E-learning - Mariana + Ricardo.</li>
-            <li><span class="text-primary"> Domingo 26 04</span> -  Aprendizaje y acompañamiento virtual E-learning - Equipo de CreActiva.</li>
+            <li class="pb-1"><span class="text-primary"> Martes 26 05</span> - Tu voz como Marca - Claudia Nieto.</li>
+            <li class="pb-1"><span class="text-primary"> Martes 02 06</span> -  El toque de la comunicación corporal - Gioconda Echenique.</li>
+            <li class="pb-1"><span class="text-primary"> Martes 09 06</span> - Ver para descubrir tu marca - Vanessa Morales.</li>
+            <li class="pb-1"><span class="text-primary"> Martes 16 06</span> - Aroma de triunfador  - Kico Salazar.</li>
+            <li class="pb-1"><span class="text-primary"> Martes 23 06</span> - ¿A qué sabe tu marca? - Invitado Sorpresa.</li>
           </ul>
       </div>
-      <div class="modal__item">
+      <div class="modal__item p-lg-0 pt-3">
         <h1 class="text-center">Suscríbete ahora</h1>
         <form id="modal__form" class="d-flex justify-content-center flex-wrap" name="FormularioMasterMind" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
           <span class="input input--creactiva">
@@ -101,14 +99,16 @@
               <span class="input__label-content input__label-content--creactiva">Email</span>
             </label>
           </span>
-          <span class="input input--creactiva">
+          <span class="input input--creactiva mb-3">
             <input class="input__field input__field--creactiva" name="custom_phone" type="text" id="master-input-3" value="+58" required/>
             <label class="input__label input__label--creactiva" for="master-input-3" data-content="Teléfono">
               <span class="input__label-content input__label-content--creactiva" >Teléfono</span>
             </label>
+            <span id="error-msg" class="d-none text-danger"></span>
+            <span id="valid-msg" class="d-none text-success">✓ Número Valido</span>
           </span>
-          <div class="custom-control custom-checkbox input input--creactiva pb-1">
-            <input id="webform_consent#SLqj_0" type="checkbox" name="webform[consent#SLqj-ver#h9L5]" value="true" class="custom-control-input" checked>
+          <div class="custom-control custom-checkbox input input--creactiva pb-1" style="z-index: 0;">
+            <input id="webform_consent#SLqj_0" type="checkbox" name="webform[consent#SLqj-ver#h9L5]" value="true" class="custom-control-input">
             <label class="custom-control-label" style="font-size: 12px;" for="webform_consent#SLqj_0">Quieres estar en el grupo de WhatsApp, solo será informativo, donde enviaremos los recursos y notificaciones de la temporada</label>
           </div>
           <!-- Obtenga el token en: https://app.getresponse.com/campaign_list.html -->
@@ -120,7 +120,7 @@
 	<input type="hidden" name="start_day" value="0" />
 	<!-- Forward form data to your page (optional) -->
 	<input type="hidden" name="forward_data" value="post" />
-          <input type="submit" value="Enviar" class="btn btn-purple w-50">
+          <input type="submit" value="Enviar" id="inputSubmit" class="btn btn-purple w-50">
           <small id="form__small" class="text-muted d-none text-light w-50">
             Comprobando los datos que nos suministraste. Esto puede tardar unos segundos.
           </small>
@@ -152,7 +152,7 @@
       </div>
       <div class="row justify-content-center text-center pb-3">
         <div class="col-lg-12">
-          <h6 class="pb-3">Aprovecha la tecnología para conéctate con lo que deseas en la vida.<!-- <br>Suscríbete y crece con la nueva comunidad basada en objetivos. --></h6>
+          <h6 class="pb-3">Aprovecha la tecnología para conéctarte con lo que deseas en la vida.<!-- <br>Suscríbete y crece con la nueva comunidad basada en objetivos. --></h6>
           <button type="button" class="btn btn-primary btn-modal">¡Suscríbete ahora!</button>
         </div>
       </div>
@@ -182,46 +182,48 @@
       </div>
       <div class="row justify-content-center mb-5">
         <div class="col-lg-8 to-left align-self-center">
-          <h5 class="pb-1">AISLAMIENTO FAMILIAR</h5>
-          <p class="pb-1">La dinámica familiar ha cambiado drásticamente. A un mes del aislamiento preventivo, ya se han generado los hábitos en la rutina diaria.</p>
+          <!-- <h5 class="pb-1">AISLAMIENTO FAMILIAR</h5>
+          <p class="pb-1">La dinámica familiar ha cambiado drásticamente. A un mes del aislamiento preventivo, ya se han generado los hábitos en la rutina diaria.</p> -->
           <div class='dropdown'>
             <div class='title pointerCursor'>
               <button class="fa fa-plus-less">
                 <!-- Añadir dos show para estár activo -->
                 <span class="show"></span><span class="show"></span></button>
-              <h6 class="d-inline-flex text-primary">POTENCIANDO A MIS HIJOS DESDE CASA</h6>
+              <h6 class="d-inline-flex text-primary">Tips Martes Mind</h6>
             </div>
             <!-- Quita el hide para estar activo -->
             <div class='menu flex-column justify-content-start'>
-              <p>- ¿Serán estos hábitos los  más adecuados para incentivar verdaderos  aprendizajes en mis hijos?</p>
-              <p>- ¿Es suficiente las tareas del colegio para garantizar que mi hijo está aprendiendo?</p>
-              <p>- ¿Qué conductas debo observar en mi familia para saber si estoy aprovechando al máximo este tiempo en familia?</p>
-              <p>- ¿Puedo seguir desarrollando talentos en mis hijos desde casa?</p>
+              <p>  
+                - Locución comercial: Sonreir para vender. <br>
+                - Locución emocional: para contenidos inspiradores practica leyendo poesía. <br>
+                - Narrar documentales: entona tu contenido como si estuvieras leyendo un cuento. <br>
+                - Para colocar la voz en su lugar vocaliza con la letra i y hazla sonar por tu nariz.  <br>
+                - A falta de suero fisiológico agua hervida con un poquito de sal para limpiar e hidratar tu apara fonador, ú sala en gotas en nariz, ojos y oídos.</p>
             </div>
           </div>
-          <p class="pb-lg-0 pb-3">Estrategias Neuroeducativas para seguir aprovechando proactivamente este tiempo con tus hijos.</p>
+          <!-- <p class="pb-lg-0 pb-3">Estrategias Neuroeducativas para seguir aprovechando proactivamente este tiempo con tus hijos.</p> -->
         </div>
         <div class="col-lg-4 to-right text-center">
           <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/samuel.webp" alt="Mariela Sánchez" class="img-fluid d-block mx-auto"  type="image/webp">
-            <img src="./resources/img/site/master-mind/invitados/samuel.png" alt="Mariela Sánchez" class="img-fluid d-block mx-auto">
+            <source srcset="./resources/img/site/master-mind/invitados/claudia.webp" alt="Claudia Nieto" class="img-fluid d-block mx-auto"  type="image/webp">
+            <img src="./resources/img/site/master-mind/invitados/claudia.png" alt="Claudia Nieto" class="img-fluid d-block mx-auto">
           </picture>
           <h6>Coach & Trainer en PNL</h6>
-          <h3 class="mt-3 mx-auto">Samuel<br>González</h3>
-          <p>Objetivos bien formulados.</p>
+          <h3 class="mt-3 mx-auto">Claudia<br>Nieto</h3>
+          <p>Tu voz como Marca.</p>
           <h6 class="mt-3 text-primary">12.05.2020</h6>
         </div>
       </div>
       <div class="carousel--participantes">
         <div class="carousel__slide">
-          <div class="carousel__control control__prev" data-slide-number="0">&nbsp;&#8249;</div>
+          <div class="carousel__control control__prev" data-slide-number="0" style="z-index: 0;">&nbsp;&#8249;</div>
           <div class="carousel__item px-1 text-center">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/zaida.webp" alt="Zaida Márquez" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/zaida.png" alt="Zaida Márquez" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/gioconda.webp" alt="Gioconda Echenique" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/gioconda.png" alt="Gioconda Echenique" class="img-fluid d-block mx-auto">
             </picture>
-            <h3 class="my-3">Zaida<br>Márquez</h3>
-            <p>Objetivos bien Formulados.</p>
+            <h3 class="my-3">Gioconda<br>Echenique</h3>
+            <p>El toque de la comunicación corporal.</p>
             <!-- <h6 class="mt-3 text-primary">21.04.2020</h6> -->
             <!-- <div class='dropdown mt-3'>
               <div class='title pointerCursor'>
@@ -241,11 +243,11 @@
           </div>
           <div class="carousel__item px-1 text-center">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/francisco.webp" alt="Francisco Sánchez" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/francisco.png" alt="Francisco Sánchez" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/vanessa.webp" alt="Vanessa Morales" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/vanessa.png" alt="Vanessa Morales" class="img-fluid d-block mx-auto">
             </picture>
-            <h3 class="my-3">Francisco<br>Sánchez</h3>
-            <p>Herramientas para la productividad Online.</p>
+            <h3 class="my-3">Vanessa<br>Morales</h3>
+            <p>Ver para descubrir tu marca.</p>
             <!-- <h6 class="mt-3 text-primary">22.04.2020</h6> -->
             <!-- <div class='dropdown mt-3'>
               <div class='title pointerCursor'>
@@ -265,10 +267,10 @@
           </div>
           <div class="carousel__item px-1 text-center">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/rafael.webp" alt="Rafael Rodríguez" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/rafael.png" alt="Rafael Rodríguez" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/kico.webp" alt="Kico Salazar" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/kico.png" alt="Kico Salazar" class="img-fluid d-block mx-auto">
             </picture>
-            <h3 class="my-3">Rafael<br>Rodríguez</h3>
+            <h3 class="my-3">Kico<br>Salazar</h3>
             <p>Habla a través de tu marca en las redes sociales.</p>
             <!-- <h6 class="mt-3 text-primary">23.04.2020</h6> -->
             <!-- <div class='dropdown mt-3'>
@@ -289,59 +291,11 @@
           </div>
           <div class="carousel__item px-1 text-center">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/saul.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/saul.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/equipo.webp" alt="Invitado Sorpresa" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/equipo.png" alt="Invitado Sorpresa" class="img-fluid d-block mx-auto">
             </picture>
-            <h3 class="my-3">Saúl<br>González</h3>
-            <p>Tu empresa en el mundo digital.</p>
-            <!-- <h6 class="mt-3 text-primary">24.04.2020</h6> -->
-            <!-- <div class='dropdown mt-3'>
-              <div class='title pointerCursor'>
-                <button class="fa fa-plus-less">
-                  Añadir dos show para estár activo
-                  <span></span><span></span></button>
-                <h6 class="d-inline-flex">Info Master Mind</h6>
-              </div>
-              Quita el hide para estar activo
-              <div class='menu flex-column justify-content-start hide text-lg-left text-center'>
-                <p>- Info 1</p>
-                <p>- Info 2</p>
-                <p>- Info 3</p>
-                <p>- Info 4</p>
-              </div>
-            </div> -->
-          </div>
-          <div class="carousel__item px-1 text-center">
-            <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/mariana.webp" alt="Mariana Pagés" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/mariana.png" alt="Mariana Pagés" class="img-fluid d-block mx-auto">
-            </picture>
-            <h3 class="my-3">Mariana + Ricardo</h3>
-            <p>Aprendizaje y acompañamiento virtual E-learning.</p>
-            <!-- <h6 class="mt-3 text-primary">25.04.2020</h6> -->
-            <!-- <div class='dropdown mt-3'>
-              <div class='title pointerCursor'>
-                <button class="fa fa-plus-less">
-                  Añadir dos show para estár activo
-                  <span></span><span></span></button>
-                <h6 class="d-inline-flex">Info Master Mind</h6>
-              </div>
-              Quita el hide para estar activo
-              <div class='menu flex-column justify-content-start hide text-lg-left text-center'>
-                <p>- Info 1</p>
-                <p>- Info 2</p>
-                <p>- Info 3</p>
-                <p>- Info 4</p>
-              </div>
-            </div> -->
-          </div>
-          <div class="carousel__item px-1 text-center">
-            <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/equipo.webp" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/equipo.png" alt="Saúl Gonzalez" class="img-fluid d-block mx-auto">
-            </picture>
-            <h3 class="my-3">Equipo de CreActiva</h3>
-            <p>Sistemas de aprendizaje en línea - ¿Cuál usar y por qué?</p>
+            <h3 class="my-3">Invitado<br>Especial</h3>
+            <p>¿A qué sabe tu marca?</p>
             <!-- <h6 class="mt-3 text-primary">26.04.2020</h6> -->
             <!-- <div class='dropdown mt-3'>
               <div class='title pointerCursor'>
@@ -359,7 +313,7 @@
               </div>
             </div> -->
           </div>
-          <div class="carousel__control control__next" data-slide-number="2">&nbsp;&#8250;</div>
+          <div class="carousel__control control__next" data-slide-number="2" style="z-index: 0;">&nbsp;&#8250;</div>
         </div>
         <div class="carousel__indicator"></div>
       </div>
@@ -375,10 +329,10 @@
         </div>
         <div class="col-xl-3 col-lg-5 text-center to-right">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/samuel.webp" alt="Samuel González" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/samuel.png" alt="Samuel González" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/claudia.webp" alt="Claudia Nieto" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/claudia.png" alt="Claudia Nieto" class="img-fluid d-block mx-auto">
             </picture>
-            <h5 class="pb-1">Samuel<br>González</h5>
+            <h5 class="pb-1">Claudia<br>Nieto</h5>
           <button type="button" class="btn btn-primary btn-modal">Suscribirme</button>
         </div>
       </div>
@@ -404,13 +358,13 @@
 
       <div class="carousel">
         <div class="carousel__slide px-1">
-          <div class="carousel__control control__prev" data-slide-number="0">&nbsp;&#8249;</div>
+          <div class="carousel__control control__prev" data-slide-number="0" style="z-index: 0;">&nbsp;&#8249;</div>
           <div class="carousel__item px-1"><h6 class="pb-1">01</h6><h5 class="pb-1">Aprendizaje</h5><p>Escucha y aplica en tu vida los tips de los profesionales que pasaron por ahí.</p></div>
           <div class="carousel__item px-1"><h6 class="pb-1">02</h6><h5 class="pb-1">Beneficio de Todos</h5><p>"La sabiduría y la experiencia del grupo siempre será mayor que la sabiduría o la experiencia individual."</p></div>
           <div class="carousel__item px-1"><h6 class="pb-1">03</h6><h5 class="pb-1">Apoyo Emocional</h5><p>Por suerte, al formar parte de una comunidad tendrás esa sensación de respaldo de tribu.</p></div>
           <div class="carousel__item px-1"><h6 class="pb-1">04</h6><h5 class="pb-1">Avanza</h5><p>Es normal que al estar en un grupo que se mueve hacia un objetivo sientas la motivación de comprometerte frente al grupo.</p></div>
           <div class="carousel__item px-1"><h6 class="pb-1">05</h6><h5 class="pb-1">Ejecutamos</h5><p>Nos ponemos manos a la obra. 90% Trabajo 10% Idea.</p></div>
-          <div class="carousel__control control__next" data-slide-number="2">&nbsp;&#8250;</div>
+          <div class="carousel__control control__next" data-slide-number="2" style="z-index: 0;">&nbsp;&#8250;</div>
         </div>
         <div class="carousel__indicator"></div>
       </div>
@@ -432,10 +386,10 @@
         </div>
         <div class="col-xl-3 col-lg-5 text-center to-right">
             <picture>
-              <source srcset="./resources/img/site/master-mind/invitados/samuel.webp" alt="Samuel González" class="img-fluid d-block mx-auto"  type="image/webp">
-              <img src="./resources/img/site/master-mind/invitados/samuel.png" alt="Samuel González" class="img-fluid d-block mx-auto">
+              <source srcset="./resources/img/site/master-mind/invitados/claudia.webp" alt="Claudia Nieto" class="img-fluid d-block mx-auto"  type="image/webp">
+              <img src="./resources/img/site/master-mind/invitados/claudia.png" alt="Claudia Nieto" class="img-fluid d-block mx-auto">
             </picture>
-            <h5 class="pb-1">Samuel<br>González</h5>
+            <h5 class="pb-1">Claudia<br>Nieto</h5>
           <button type="button" class="btn btn-purple btn-modal">Suscribirme</button>
         </div>
       </div>
