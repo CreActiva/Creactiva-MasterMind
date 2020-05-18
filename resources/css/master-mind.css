@@ -164,30 +164,30 @@ header {
 }
 
 .glitch__img:nth-child(2) {
-  background: url(../img/site/master-mind/invitados/mariela.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/claudia.webp) center no-repeat;
 }
 .no-webp .glitch__img:nth-child(2){
-  background: url(../img/site/master-mind/invitados/mariela.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/claudia.png) center no-repeat;
 }
 
 .glitch__img:nth-child(3) {
-  background: url(../img/site/master-mind/invitados/francisco.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/gioconda.webp) center no-repeat;
 }
 .no-webp .glitch__img:nth-child(3){
-  background: url(../img/site/master-mind/invitados/francisco.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/gioconda.png) center no-repeat;
 }
 
 .glitch__img:nth-child(4) {
-  background: url(../img/site/master-mind/invitados/rafael.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/kico.webp) center no-repeat;
 }
 .no-webp .glitch__img:nth-child(4){
-  background: url(../img/site/master-mind/invitados/rafael.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/kico.png) center no-repeat;
 }
 .glitch__img:nth-child(5) {
-  background: url(../img/site/master-mind/invitados/saul.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/equipo.webp) center no-repeat;
 }
 .no-webp .glitch__img:nth-child(5){
-  background: url(../img/site/master-mind/invitados/saul.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/equipo.png) center no-repeat;
 }
 /* ====== */
 #S2::before {
