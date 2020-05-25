@@ -1,11 +1,13 @@
-@media (min-width: 1200px)   {
+@media (min-width: 1200px) {
   .indicator__container {
     width: 8rem;
   }
-} 
+}
+
 ul {
   list-style: none;
 }
+
 .intl-tel-input .country-list {
   position: absolute;
   z-index: 9999;
@@ -13,46 +15,68 @@ ul {
   text-align: left;
   padding: 0;
   margin: 0 0 0 -1px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: 1px solid #CCC;
   white-space: nowrap;
   max-height: 200px;
   overflow-y: scroll;
 }
+
+
 /* International Telephone Input */
-.iti__flag {background-image: url("../../vendors/intl-tel-input/img/flags.png");}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {background-image: url("../../vendors/intl-tel-input/img/flags@2x.png");}
+
+.iti__flag {
+  background-image: url("../../vendors/intl-tel-input/img/flags.png");
 }
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../../vendors/intl-tel-input/img/flags@2x.png");
+  }
+}
+
 .iti__country-name {
   display: none !important;
 }
-.iti__country-list{
+
+.iti__country-list {
   z-index: 9999;
 }
-.iti__arrow { border: none; }
+
+.iti__arrow {
+  border: none;
+}
+
+
 /* ============================= */
-.carousel--participantes .control__prev{
+
+.carousel--participantes .control__prev {
   left: 5rem;
-} 
-.carousel--participantes .control__next{
+}
+
+.carousel--participantes .control__next {
   right: 5rem;
 }
-.carousel__control{
+
+.carousel__control {
   width: 1.5rem
 }
 
 body {
   color: var(--white);
 }
-.input__label--creactiva::after{
+
+.input__label--creactiva::after {
   color: var(--violet);
 }
-.input__field--creactiva:focus + .input__label--creactiva::before{
-	background-color: var(--violet);
+
+.input__field--creactiva:focus+.input__label--creactiva::before {
+  background-color: var(--violet);
 }
-.fa-plus-less span{
+
+.fa-plus-less span {
   background: var(--orange);
 }
 
@@ -68,8 +92,11 @@ body {
   background: transparent;
   border: none;
 }
+
+
 /* Modal */
-.modal-content{
+
+.modal-content {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -78,10 +105,12 @@ body {
   height: 95%;
   justify-content: space-around;
 }
-.modal__item{
+
+.modal__item {
   flex: 0 0 50%;
   height: auto;
 }
+
 .close-button {
   width: auto;
   height: auto;
@@ -89,65 +118,78 @@ body {
   right: 1rem;
   position: absolute;
 }
-.modal__item:nth-child(2){
-  border-right: 1px solid ;
+
+.modal__item:nth-child(2) {
+  border-right: 1px solid;
   background: url(../img/site/master-mind/persona-saltando-playa.webp) center no-repeat;
   background-size: cover;
   height: 100%;
 }
-.no-webp .modal__item:nth-child(3){
-  border-right: 1px solid ;
+
+.no-webp .modal__item:nth-child(3) {
+  border-right: 1px solid;
   background: url(../img/site/master-mind/persona-saltando-playa.jpg) center no-repeat;
   background-size: cover;
   height: 100%;
 }
-.modal__item img, .modal__item source{
+
+.modal__item img,
+.modal__item source {
   width: 80%;
   height: auto;
   display: block;
   margin: auto;
 }
-#modal__form{
+
+#modal__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.input--creactiva{
+
+.input--creactiva {
   width: 50%;
 }
-@media (max-width: 991.98px) { 
-  .modal-content{
+
+@media (max-width: 991.98px) {
+  .modal-content {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
   }
-  .modal__item:nth-child(2){
+  .modal__item:nth-child(2) {
     display: none;
     height: 100%;
     align-self: start;
     order: 2;
   }
-  .modal__item:nth-child(3){
+  .modal__item:nth-child(3) {
     order: 1;
     flex: 1;
   }
-  .input--creactiva{
+  .input--creactiva {
     width: 100%;
   }
 }
 
+
 /* ===== */
+
+
 /* HEADER */
+
 header {
   background: url('../img/site/master-mind/imagen-teclas.webp') center 10rem no-repeat, var(--black);
   background-size: cover;
   background-attachment: fixed;
 }
-.no-webp header{
+
+.no-webp header {
   background: url('../img/site/master-mind/imagen-teclas.png') center 10rem no-repeat, var(--black);
   background-attachment: scroll;
 }
+
 @media (max-width: 991.98px) {
   header {
     background-position: center;
@@ -157,37 +199,46 @@ header {
 .glitch__img:nth-child(1) {
   background: url(../img/site/master-mind/header.webp) center no-repeat;
 }
-.no-webp .glitch__img:nth-child(1){
+
+.no-webp .glitch__img:nth-child(1) {
   background: url(../img/site/master-mind/header.png) center no-repeat;
 }
 
 .glitch__img:nth-child(2) {
   background: url(../img/site/master-mind/invitados/claudia.webp) center no-repeat;
 }
-.no-webp .glitch__img:nth-child(2){
+
+.no-webp .glitch__img:nth-child(2) {
   background: url(../img/site/master-mind/invitados/claudia.png) center no-repeat;
 }
 
 .glitch__img:nth-child(3) {
   background: url(../img/site/master-mind/invitados/gioconda.webp) center no-repeat;
 }
-.no-webp .glitch__img:nth-child(3){
+
+.no-webp .glitch__img:nth-child(3) {
   background: url(../img/site/master-mind/invitados/gioconda.png) center no-repeat;
 }
 
 .glitch__img:nth-child(4) {
   background: url(../img/site/master-mind/invitados/kico.webp) center no-repeat;
 }
-.no-webp .glitch__img:nth-child(4){
+
+.no-webp .glitch__img:nth-child(4) {
   background: url(../img/site/master-mind/invitados/kico.png) center no-repeat;
 }
+
 .glitch__img:nth-child(5) {
   background: url(../img/site/master-mind/invitados/equipo.webp) center no-repeat;
 }
-.no-webp .glitch__img:nth-child(5){
+
+.no-webp .glitch__img:nth-child(5) {
   background: url(../img/site/master-mind/invitados/equipo.png) center no-repeat;
 }
+
+
 /* ====== */
+
 #S2::before {
   content: " ";
   padding: 20px;
@@ -201,36 +252,41 @@ header {
   border: 5px solid #117382;
   margin-top: 10rem;
 }
+
 .degradado2 {
-    background: linear-gradient(to bottom, #000, #3c0f6f);
+  background: linear-gradient(to bottom, #000, #54001B);
 }
-  
+
 .degradado3 {
-  background: linear-gradient(to bottom, #3c0f6f, #54001B);
+  background: linear-gradient(to bottom, #54001B, #3C0F6F);
 }
 
 .degradado4 {
-  background: linear-gradient(to bottom, #54001B, #000);
+  background: linear-gradient(to bottom, #3C0F6F, #000);
 }
 
 .suscribete {
   color: #fff !important;
-  background-color: #3c0f6f !important;
+  background-color: #3C0F6F !important;
 }
 
 .suscribete:hover {
   box-shadow: 0 8px 16px 0 rgb(22, 37, 61);
 }
 
-.carousel__item{
+.carousel__item {
   background-color: transparent;
   flex-direction: column;
   border: none;
 }
-.indicator__container > li{
+
+.indicator__container>li {
   border: none;
 }
+
+
 /* Sección 1 Título/Info */
+
 #S1::after {
   content: " ";
   background: #3F1082;
@@ -238,14 +294,20 @@ header {
   padding: 3rem 0.1rem;
   left: 4rem;
   transform: rotate(-35deg);
-  box-shadow: -8px 0px rgb(0,0,0);
+  box-shadow: -8px 0px rgb(0, 0, 0);
 }
-.title-master{
+
+.title-master {
   vertical-align: top;
 }
+
+
 /* ===================== */
+
+
 /* Sección 2 */
-.font-weight-1000{
+
+.font-weight-1000 {
   font-weight: 1000 !important;
 }
 
@@ -261,27 +323,37 @@ header {
   margin-top: -1rem;
   align-self: center;
 }
-@media (min-width: 1600px){
+
+@media (min-width: 1600px) {
   .beneficios::before {
     font-size: 9rem;
   }
 }
-@media (max-width: 991.98px) { 
+
+@media (max-width: 991.98px) {
   .beneficios::before {
     left: 16rem;
   }
 }
+
 @media (max-width: 575.98px) {
   .beneficios::before {
     left: 12rem;
   }
 }
+
 .carousel--participantes picture {
   z-index: 1;
 }
+
+
 /* ========= */
+
+
 /* Sección 3 */
-.metodo::after, .metodo::before {
+
+.metodo::after,
+.metodo::before {
   text-transform: uppercase;
   font-weight: 1000;
   font-size: calc(0.2rem + 12vw);
@@ -290,16 +362,22 @@ header {
   opacity: 0.1;
   left: 0;
 }
+
 .metodo::before {
   content: "metodo";
   margin-top: -10rem;
-  
 }
+
 .metodo::after {
   content: "logía";
 }
+
+
 /* ========= */
+
+
 /* Sección 4 */
+
 .clock__item-1::after {
   font-size: 6rem;
   color: var(--white);
@@ -310,7 +388,9 @@ header {
   margin-left: 7vw;
   font-weight: bold;
 }
-.clock__item-2::after, .clock__item-3::after {
+
+.clock__item-2::after,
+.clock__item-3::after {
   font-size: 6rem;
   color: var(--white);
   display: flex;
@@ -320,23 +400,27 @@ header {
   margin-left: 13vw;
   font-weight: bold;
 }
+
 @media (max-width: 991.98px) {
   .clock__item-1::after {
     margin-left: 12vw;
   }
-  .clock__item-2::after, .clock__item-3::after {
+  .clock__item-2::after,
+  .clock__item-3::after {
     margin-left: 18vw;
   }
 }
+
 @media (max-width: 575.98px) {
-  .clock__item-1::after, .clock__item-2::after, .clock__item-3::after {
+  .clock__item-1::after,
+  .clock__item-2::after,
+  .clock__item-3::after {
     font-size: 2.5rem;
   }
   .clock__item-3::after {
     margin-left: 23vw;
   }
 }
-
 
 
 /* ========= */
