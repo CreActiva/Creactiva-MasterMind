@@ -1,5 +1,5 @@
 // Activar contador
-var contador = new CountDown('#clock', 'May 26 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
+var contador = new CountDown('#clock', 'Jun 02 2020 14:00:00 GMT-0400', '¡Comenzamos!', true);
 // ================
 // Carousel
 var carouselHTML = document.querySelector('.carousel');
@@ -13,7 +13,7 @@ var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideIt
 carouselHTML = document.querySelector('.carousel--participantes');
 var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideItem, breakPoint, boolNumIndicator);
 // ========
-var input =  document.querySelector("#master-input-3");
+var input = document.querySelector("#master-input-3");
 var iti = window.intlTelInput(input, {
   initialCountry: 've',
   nationalMode: false,
@@ -22,13 +22,13 @@ var iti = window.intlTelInput(input, {
   preventInvalidDialCodes: true,
   customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
     selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/ |-|(|)/g, '');
-    return  selectedCountryPlaceholder;
+    return selectedCountryPlaceholder;
   },
   // separateDialCode: true
 });
 // Verificar y luego realizar envio en formulario
 var form = document.forms['FormularioMasterMind'];
-form.addEventListener('submit', e =>{
+form.addEventListener('submit', e => {
   e.preventDefault();
   input.value = input.value.replace(/ |-|(|)/g, '');
   form.submit();
@@ -63,13 +63,13 @@ input.addEventListener('blur', function() {
 // ============================
 
 // Escucha formulario numérico no mayor a 30 caracteres
-  var input=  form.elements[2];
-  input.addEventListener('input', function(){
-    if (this.value.length > 30) this.value = this.value.slice(0,30);
-     // Verifica el primer caracter
-    // if(!(/^\+/.test(this.value)) && (this.value.length <= 1)) this.value = this.value.slice(0,(this.value.length - 1));
-    if(this.value.length <= 1) this.value = "+";
-    // Verifica el segundo caracter
-    if (!(/^\+(\d*$)/.test(this.value)) && (this.value.length > 1) ) this.value = this.value.slice(0,(this.value.length - 1));
-  });
+var input = form.elements[2];
+input.addEventListener('input', function() {
+  if (this.value.length > 30) this.value = this.value.slice(0, 30);
+  // Verifica el primer caracter
+  // if(!(/^\+/.test(this.value)) && (this.value.length <= 1)) this.value = this.value.slice(0,(this.value.length - 1));
+  if (this.value.length <= 1) this.value = "+";
+  // Verifica el segundo caracter
+  if (!(/^\+(\d*$)/.test(this.value)) && (this.value.length > 1)) this.value = this.value.slice(0, (this.value.length - 1));
+});
 // ====================================================
