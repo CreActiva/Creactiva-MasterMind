@@ -100,6 +100,7 @@
         </ul>
       </div>
       <div class="modal__item p-lg-0 pt-3">
+        <p class="text-center py-1">Que cada tecleo te acerque a los objetivos de vida.</p>
         <h2 class="text-center h1">Suscríbete ahora</h2>
         <form id="modal__form" class="d-flex justify-content-center flex-wrap" name="FormularioMasterMind" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
           <span class="input input--creactiva">
@@ -122,10 +123,10 @@
           <span id="error-msg" class="d-none text-danger"></span>
           <span id="valid-msg" class="d-none text-success">✓ Número Valido</span>
           </span>
-          <div class="custom-control custom-checkbox input input--creactiva pb-1" style="z-index: 0;">
+          <!-- <div class="custom-control custom-checkbox input input--creactiva pb-1" style="z-index: 0;">
             <input id="webform_consent#SLqj_0" type="checkbox" name="webform[consent#SLqj-ver#h9L5]" value="true" class="custom-control-input">
             <label class="custom-control-label" style="font-size: 12px;" for="webform_consent#SLqj_0">Quieres estar en el grupo de WhatsApp, solo será informativo, donde enviaremos los recursos y notificaciones de la temporada</label>
-          </div>
+          </div> -->
           <!-- Obtenga el token en: https://app.getresponse.com/campaign_list.html -->
           <input type="hidden" name="campaign_token" value="yC6E3" />
           <!-- Añadir suscriptor a la secuencia de seguimiento con un día específico (opcional) -->
@@ -146,29 +147,40 @@
   <!-- ============= -->
   <!-- HEADER -->
   <header class="bg-black pt-lg-0 pt-3">
-    <div class="glitch glitch--style-5">
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
-      <div class="glitch__img"></div>
+    <div class="container">
+      <div class="row py-xl-5">
+        <div class="col-xl-6 order-xl-1 order-2 to-left">
+          <h6 class="mb-0 pb-2">Los Master Mind han existido desde hace mucho tiempo<br><br>Nosotros solo promovemos el espacio</h6>
+          <p class="pb-2">Un Master Mind es un conversatorio rodeado de personas que tienen objetivos así como tú.<br><br>En los Martes Mind podrás entrar como oyente y escuchar consejos y experiencias de personas profesionales.<br><br>Además de poder relacionarte con
+            otras personas.
+          </p>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary btn-modal d-inline">Suscribirme</button>
+          </div>
+        </div>
+        <div class="col-xl-6 align-items-center d-flex order-xl-2 order-1 px-3 pb-lg-0 pb-3 to-right">
+          <img src="./resources/img/site/master-mind/play.png" alt="Martes Mind Video" style="cursor:pointer;" id="video">
+          <div class="embed-responsive embed-responsive-16by9 d-none" id="video-inactive">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/I2VRHSO2buA?&autoplay=1&mute=0"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
+
   </header>
   <!-- ====== -->
   <!-- S1 - INFO 1 -->
   <section id="S1" class="bg-black">
     <div class="container">
-      <div class="pb-1 row justify-content-center text-center">
+      <div class="pb-1 row justify-content-center text-center pt-3">
         <div class="col-lg-12 to-top">
-          <h1 class="d-inline title-master" style="vertical-align: top;">Que cada tecleo te acerque a los objetivos de </h1>
-          <h1 class="display d-inline">TU VIDA</h1>
+          <h1 class="d-inline title-master" style="vertical-align: top;">Escucha tips aplicables a tus emprendimientos, marcas o ideas</h1>
         </div>
       </div>
       <div class="row justify-content-center text-center pb-3">
         <div class="col-lg-12">
-          <h6 class="pb-3">
+          <h6>
             Aquí valoramos cada esfuerzo y cada momento. Uniendo la tecnología y valorando tu tiempo queremos invitarte a nuestro espacio de conversatorios.</h6>
-          <button type="button" class="btn btn-primary btn-modal">¡Suscríbete ahora!</button>
         </div>
       </div>
       <div class="row justify-content-center align-items-center">
@@ -332,18 +344,21 @@
   <div id="S3" class="degradado3 py-3">
     <div class="container">
       <div class="row justify-content-center align-items-center mb-5">
-        <div class="col-lg-7 mb-lg-0 mb-3">
+        <div class="col-lg-6 mb-lg-0 mb-3">
           <h5 class="border-bottom mb-5 pb-2 to-left">Los Master Mind han existido desde hace mucho tiempo.<br>Nosotros solo promovemos el espacio.</h5>
           <p>Un Master Mind es un conversatorio rodeado de personas que tienen objetivos así como tú.<br>En los Martes Mind podrás entrar como oyente y escuchar consejos y experiencias de personas profesionales.<br>Además de poder relacionarte con otras
             personas.
           </p>
         </div>
-        <div class="col-xl-3 col-lg-5 text-center to-right">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/claudia.webp" alt="Claudia Nieto" class="img-fluid d-block mx-auto" type="image/webp">
-            <img src="./resources/img/site/master-mind/invitados/claudia.png" alt="Claudia Nieto" class="img-fluid d-block mx-auto">
-          </picture>
-          <h5 class="pb-1">Claudia<br>Nieto</h5>
+        <div class="col-xl-6 col-lg-5 text-center to-right">
+          <div class="glitch glitch--style-5">
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+          </div>
+          <h5 class="pb-1">Segunda Temporada</h5>
           <button type="button" class="btn btn-primary btn-modal">Suscribirme</button>
         </div>
       </div>
@@ -417,13 +432,16 @@
           <h3>El siguiente master mind es en:</h3>
           <div id="clock"></div>
         </div>
-        <div class="col-xl-3 col-lg-5 text-center to-right">
-          <picture>
-            <source srcset="./resources/img/site/master-mind/invitados/claudia.webp" alt="Claudia Nieto" class="img-fluid d-block mx-auto" type="image/webp">
-            <img src="./resources/img/site/master-mind/invitados/claudia.png" alt="Claudia Nieto" class="img-fluid d-block mx-auto">
-          </picture>
-          <h5 class="pb-1">Claudia<br>Nieto</h5>
-          <button type="button" class="btn btn-purple btn-modal">Suscribirme</button>
+        <div class="col-xl-5 col-lg-5 text-center to-right">
+          <div class="glitch glitch--style-5">
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+            <div class="glitch__img"></div>
+          </div>
+          <h5 class="pb-1">Segunda Temporada</h5>
+          <button type="button" class="btn btn-primary btn-modal">Suscribirme</button>
         </div>
       </div>
       <div class="row justify-content-center text-center 3">
@@ -438,25 +456,37 @@
   <div class="bg-black pb-3">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-lg-3">
+        <div class="col-lg-4 d-flex">
           <picture>
             <source srcset="./resources/img/site/master-mind/logo.webp" alt="CreActiva" class="img-fluid" type="image/webp">
             <img src="./resources/img/site/master-mind/logo.png" alt="CreActiva" class="img-fluid">
           </picture>
+          <picture class="d-flex align-items-center">
+            <source srcset="resources/img/site/master-mind/logos/logo-proyecta.png" alt="Proyecta" class="img-fluid" type="image/webp">
+            <img src="resources/img/site/master-mind/logos/logo-proyecta.png" alt="Proyecta" class="img-fluid">
+          </picture>
         </div>
-        <div class="col-lg-9 justify-content-around d-flex align-items-center flex-sm-row flex-column pb-sm-0 pb-3">
+        <div class="col-lg-4 justify-content-around d-flex align-items-center flex-sm-row flex-column pb-sm-0 pb-3">
           <a class="text-light" href="./politica-privacidad.html">Política de privacidad</a>
           <a class="text-light" href="./terminos-condiciones.html">Términos y condiciones</a>
         </div>
       </div>
       <div class="row justify-content-center text-center">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
           <h6>2020 Creactiva Service St.<br>Todos los derechos reservados</h6>
         </div>
       </div>
     </div>
   </div>
   <!--SCRIPTS-->
+  <script>
+    var video = document.getElementById('video');
+    var videoInactive = document.getElementById('video-inactive');
+    video.addEventListener('click', function() {
+      videoInactive.classList.replace('d-none', 'd-block');
+      video.classList.add('d-none')
+    });
+  </script>
   <script src="./vendors/dropdown/dropdown.js"></script>
   <script src="./vendors/intersection-observer/intersection-observer.js"></script>
   <script src="./vendors/ajax/ajax.js"></script>
