@@ -422,9 +422,36 @@
       <div class="row justify-content-center pb-3">
         <div class="col-lg-10 px-lg-3 px-1">
           <h1 class="pb-3 text-center">Suscríbete de forma gratuita</h1>
-          <p>Si dispones de internet.<br>Si dispones de un dispositivo inteligente (PC, Laptop o Celular).<br>Si deseas conocer el punto de vista, métodos o tips de personas profesionales en su área.<br>Si te gustaría conocer e implementar los tips con otros
-            participantes.
-          </p>
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-4 d-flex flex-column">
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__ve mr-3"></div>
+                <div>2 pm Caracas</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__us mr-3"></div>
+                <div>2 pm Miami</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__es mr-3"></div>
+                <div>8 pm Madrid</div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__ar mr-3"></div>
+                <div>3 pm Buenos Aires</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__cl mr-3"></div>
+                <div>2 pm Santiago</div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="iti__flag iti__mx mr-3"></div>
+                <div>1 pm Ciudad de México</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row justify-content-center text-center py-3">
@@ -484,7 +511,8 @@
     var videoInactive = document.getElementById('video-inactive');
     video.addEventListener('click', function() {
       videoInactive.classList.replace('d-none', 'd-block');
-      video.classList.add('d-none')
+      videoInactive.childNodes[1].src += '?&autoplay=1&mute=0';
+      video.classList.add('d-none');
     });
   </script>
   <script src="./vendors/dropdown/dropdown.js"></script>
