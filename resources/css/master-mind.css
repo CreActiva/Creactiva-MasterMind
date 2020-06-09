@@ -382,6 +382,8 @@ header {
 
 /* Sección 4 */
 
+
+/* 
 .clock__item-1::after {
   font-size: 6rem;
   color: var(--white);
@@ -424,7 +426,7 @@ header {
   .clock__item-3::after {
     margin-left: 23vw;
   }
-}
+} */
 
 
 /* ========= */
