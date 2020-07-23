@@ -11,7 +11,7 @@ var boolNumIndicator = false;
 var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideItem, breakPoint, boolNumIndicator);
 
 carouselHTML = document.querySelector('.carousel--participantes');
-var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideItem, breakPoint, boolNumIndicator);
+// var carousel = new Carousel(carouselHTML, boolControl, boolIndicator, numSlideItem, breakPoint, boolNumIndicator);
 // ========
 var input = document.querySelector("#master-input-3");
 var iti = window.intlTelInput(input, {
