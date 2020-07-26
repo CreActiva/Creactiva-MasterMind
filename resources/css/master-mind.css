@@ -125,14 +125,14 @@ body {
 
 .col-modal-1 {
   border-right: 1px solid;
-  background: url(../img/site/master-mind/persona-bebiendo-cafe.webp) center no-repeat;
+  background: url(../img/site/master-mind/cafe.webp) center no-repeat;
   background-size: cover;
   height: 100%;
 }
 
 .no-webp .col-modal-1 {
   border-right: 1px solid;
-  background: url(../img/site/master-mind/persona-bebiendo-cafe.jpg) center no-repeat;
+  background: url(../img/site/master-mind/cafe.jpg) center no-repeat;
   background-size: cover;
   height: 100%;
 }
@@ -201,43 +201,43 @@ header {
 }
 
 .glitch__img:nth-child(1) {
-  background: url(../img/site/master-mind/header.webp) center no-repeat;
+  background: url(../img/site/master-mind/martes-mind-t3.webp) center no-repeat;
 }
 
 .no-webp .glitch__img:nth-child(1) {
-  background: url(../img/site/master-mind/header.png) center no-repeat;
+  background: url(../img/site/master-mind/martes-mind-t3.png) center no-repeat;
 }
 
 .glitch__img:nth-child(2) {
-  background: url(../img/site/master-mind/invitados/claudia.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/jeremias.webp) center no-repeat;
 }
 
 .no-webp .glitch__img:nth-child(2) {
-  background: url(../img/site/master-mind/invitados/claudia.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/jeremias.png) center no-repeat;
 }
 
 .glitch__img:nth-child(3) {
-  background: url(../img/site/master-mind/invitados/gioconda.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/elizabeth.webp) center no-repeat;
 }
 
 .no-webp .glitch__img:nth-child(3) {
-  background: url(../img/site/master-mind/invitados/gioconda.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/elizabeth.png) center no-repeat;
 }
 
 .glitch__img:nth-child(4) {
-  background: url(../img/site/master-mind/invitados/kico.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/yoneida.webp) center no-repeat;
 }
 
 .no-webp .glitch__img:nth-child(4) {
-  background: url(../img/site/master-mind/invitados/kico.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/yoneida.png) center no-repeat;
 }
 
 .glitch__img:nth-child(5) {
-  background: url(../img/site/master-mind/invitados/equipo.webp) center no-repeat;
+  background: url(../img/site/master-mind/invitados/eduardo.webp) center no-repeat;
 }
 
 .no-webp .glitch__img:nth-child(5) {
-  background: url(../img/site/master-mind/invitados/equipo.png) center no-repeat;
+  background: url(../img/site/master-mind/invitados/eduardo.png) center no-repeat;
 }
 
 
@@ -253,20 +253,20 @@ header {
   position: absolute;
   right: 4rem;
   transform: rotate(45deg);
-  border: 5px solid #117382;
+  border: 5px solid #F6C872;
   margin-top: 10rem;
 }
 
 .degradado2 {
-  background: linear-gradient(to bottom, #000, #54001B);
+  background: linear-gradient(to bottom, #000, #5B0202);
 }
 
 .degradado3 {
-  background: linear-gradient(to bottom, #54001B, #3C0F6F);
+  background: linear-gradient(to bottom, #5B0202, #B95935);
 }
 
 .degradado4 {
-  background: linear-gradient(to bottom, #3C0F6F, #000);
+  background: linear-gradient(to bottom, #B95935, #E18A43);
 }
 
 .suscribete {
@@ -293,7 +293,7 @@ header {
 
 #S1::after {
   content: " ";
-  background: #3F1082;
+  background: #5B0202;
   position: absolute;
   padding: 3rem 0.1rem;
   left: 4rem;
@@ -376,9 +376,22 @@ header {
   content: "logía";
 }
 
+.footer {
+  background : linear-gradient(to bottom, #E18A43, #F6C872);
+}
 
+.footer h6, .footer a {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.footer a:hover {
+  color: #5B0202;
+}
 /* ========= */
-
+.btn-vinotinto{
+    color: white;
+    background-color: #5B0202;
+    border-color: #5B0202;
+}
 
 /* Sección 4 */
 

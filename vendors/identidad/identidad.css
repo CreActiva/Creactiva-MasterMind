@@ -144,7 +144,7 @@ h6,
 .h6 {
   margin-bottom: 0;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 h1,
@@ -156,6 +156,7 @@ h5,
 .h4,
 .h5 {
   font-weight: 1000;
+
 }
 
 h2,
@@ -278,6 +279,6 @@ p {
 
 .border-violet-radial {
   border: 10px solid transparent !important;
-  border-image: radial-gradient( circle, var(--violet), var(--purple))1 !important;
+  border-image: radial-gradient( circle, #5B0202, #F6C872)1 !important;
   box-shadow: 0 0 20px var(--black) !important;
 }
