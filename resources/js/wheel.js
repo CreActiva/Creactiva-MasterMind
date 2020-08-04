@@ -23,22 +23,22 @@
     });
   });
 
-  let spinBtn = document.querySelector('.btn-spin');
-  let output = document.querySelector('#output');
+  // let spinBtn = document.querySelector('.btn-spin');
+  // let output = document.querySelector('#output');
 
-  spinBtn.addEventListener('click', function(e) {
-    output.textContent = '';
-    wheels.forEach(function(wheel) {
-      wheel.spin(function(member) {
-        app.$children[0]._props.index = member;
-        output.innerHTML = 'Winner:<br /><strong>' + member + '</strong>';
-      });
-      wheel.spin(function(member) {
-        app.$children[0]._props.index = member;
-        modal.classList.toggle('show-modal');
-      });
-  }, false);
-  });
+  // spinBtn.addEventListener('click', function(e) {
+  //   output.textContent = '';
+  //   wheels.forEach(function(wheel) {
+  //     wheel.spin(function(member) {
+  //       app.$children[0]._props.index = member;
+  //       output.innerHTML = 'Winner:<br /><strong>' + member + '</strong>';
+  //     });
+  //     wheel.spin(function(member) {
+  //       app.$children[0]._props.index = member;
+  //       modal.classList.toggle('show-modal');
+  //     });
+  // }, false);
+  // });
 })();
 let modalComponent = Vue.component('modalcontent', {
   template: /*html*/`
@@ -159,4 +159,4 @@ function windowOnClick(event) {
 }
 triggerBtn.forEach(el => el.addEventListener('click', toggleModal))
 window.addEventListener('click', windowOnClick);
-closeButton.addEventListener('click', windowOnClick);
+// closeButton.addEventListener('click', windowOnClick);

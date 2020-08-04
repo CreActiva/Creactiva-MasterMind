@@ -89,3 +89,7 @@ body{
   background-color: #5B0202;
   border-color: #5B0202;
 }
+#wheel-1 {
+  background: url("../img/site/rueda/aro.png") no-repeat center / cover;
+  padding: 2.5rem;
+}
