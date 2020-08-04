@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/CreActiva/Creactiva-MasterMind/issues"
   },
-  "homepage": "https://github.com/CreActiva/Creactiva-MasterMind#readme"
+  "homepage": "https://github.com/CreActiva/Creactiva-MasterMind#readme",
+  "dependencies": {
+    "prize-wheel": "0.0.1",
+    "vue": "^2.6.11"
+  }
 }

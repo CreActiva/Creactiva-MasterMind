@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Master Mind | creActiva</title>
+  <link rel="stylesheet" href="../../vendors/identidad/identidad.css">
+  <link rel="stylesheet" href="../../vendors/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../vendors/horizontal-scrolling/horizontal-scrolling.css">
+  <link rel="stylesheet" href="../../vendors/dropdown/dropdown.css">
+  <link rel="stylesheet" href="../../vendors/carousel/carousel.css">
+  <link rel="stylesheet" href="../../vendors/to-animation/to-animation.css">
+  <link rel="stylesheet" href="../../vendors/modal/modal.css">
+  <link rel="stylesheet" href="../../vendors/glitch/glitch.css">
+  <link rel="stylesheet" href="../../vendors/form/form.css">
+  <link rel="stylesheet" href="../../vendors/intl-tel-input/css/intlTelInput.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163772121-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163772121-1');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '509599483254204');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=509599483254204&ev=PageView&noscript=1" /></noscript>
+  <link rel="stylesheet" href="../../resources/css/wheel.css">
+
+  <link rel="shortcut icon" href="../../resources/img/logo/isotipo-header.png" type="image/png">
+  <meta name="keywords" content="creActiva">
+  <meta name="author" content="creActiva">
+  <meta name="copyright" content="creActiva" />
+  <meta name="image" content="../../resources/img/logo/logotipo.png">
+
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="creActiva">
+  <meta property="og:description" content="Martes Mind es un espacio donde puedes proponerte y trabajar tus metas rodeándote de personas que sueñan a lo grande. Observa distintos puntos de vista y aprende de la sinergia de un grupo.
+    Junto a personas con experiencia en distintas áreas, que te brindarán tips aplicables a tu día a día.">
+  <meta property="og:image" content="../../resources/img/logo/logotipo.png">
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:site_name" content="creActiva">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://creactivateam.com/master-mind">
+  <meta property="og:title" content="Martes Mind | creActiva">
+  <meta property="og:description"
+    content="Somos una startup que brinda soluciones audiovisuales y publicitarias. Queremos trabajar con negocios y marcas que no le tengan miedo a destacar de la competencía con producciones de calidad.">
+  <meta property="og:image" content="./resources/img/logo/logotipo.png">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://creactivateam.com/master-mind">
+  <meta property="twitter:title" content="Martes Mind | creActiva">
+  <meta property="twitter:description"
+    content="Somos una startup que brinda soluciones audiovisuales y publicitarias. Queremos trabajar con negocios y marcas que no le tengan miedo a destacar de la competencía con producciones de calidad.">
+  <meta property="twitter:image" content="../../resources/img/logo/logotipo.png">
+</head>
+<body>
+  <div class="layout" id="app">
+    <!-- Ventana Modal -->
+    <div class="modal">
+      <modalcontent></modalcontent>
+    </div>  
+    <section class="wheel-container ">
+      <canvas id="wheel-1"></canvas>
+      <output id="output"></output>
+    </section>
+    
+    <section class="actions text-center">
+      <button class="btn-spin punch btn btn-vinotinto">Spin!</button>
+    </section>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+  <script src="../../node_modules/prize-wheel/prize-wheel.js"></script>
+  <script src="../../resources/js/wheel.js"></script>
+  <script src="../../vendors/intersection-observer/intersection-observer.js"></script>
+  <script src="../../vendors/to-animation/to-animation.js"></script>
+  <script src="../../vendors/modernizr/modernizr-custom.js"></script>
+  <script src="../../vendors/countdown/countdown.js"></script>
+<!-- <script src="./resources/js/master-mind.js"></script> -->
+</body>
+
+</html>
