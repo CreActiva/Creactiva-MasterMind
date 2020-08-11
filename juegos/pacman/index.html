@@ -4,7 +4,7 @@
 <html lang="en" manifest="cache.manifest">
 <head>
 	<meta charset="utf-8" />
-	<title>Pacman in HTML 5 Canvas</title>
+	<title>Pacman CreActiva</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="pacman-canvas.css">
 	<link rel="manifest" href="manifest.json">
@@ -12,7 +12,7 @@
 
 	<!-- SEO Stuff -->
     <meta name="description" content="Play Pacman Canvas for free on your desktop or mobile. This whole game is open source an was created in HTML5." />
-    <link rel="canonical" href="http://pacman.platzh1rsch.ch/" />
+    <link rel="canonical" href="https://pacman.platzh1rsch.ch/" />
     <meta name="author" content="platzh1rsch.ch" />
     <meta name="publisher" content="platzh1rsch.ch" />
     <meta name="copyright" content="&copy; Copyright (c) platzh1rsch.ch" />
@@ -83,9 +83,9 @@
 
 <!-- Highscore -->
 <div class="content" id="highscore-content">
-	<div class="button" id="back">&lt; back</div>
+	<div class="button" id="back">&lt; atrás</div>
 	<div>
-		<h1>Highscore</h1>
+		<h1>Altos Puntajes</h1>
 		<p>
 			<ol id="highscore-list">
 				
@@ -96,54 +96,54 @@
 
 <!-- INSTRUCTIONS -->
 <div class="content" id="instructions-content">
-	<div class="button" id="back">&lt; back</div>
+	<div class="button" id="back">&lt; atrás</div>
 	<div>
-		<h1>Instructions</h1>
+		<h1>Instrucciones</h1>
 		<div class="nomobile">
-			<h2>Controls</h2>
-			<p>Use your arrow keys or [W,A,S,D] keys to navigate pacman.</p>
+			<h2>Controles</h2>
+			<p>Utilice sus teclas de flecha o [W,A,S,D] teclas para manejar Pacman.</p>
 			<p>To pause / resume the game press [SPACE] or [ESC] or just click into the game area.</p>
 		</div>
 		<div class="mobile">
-			<h2>Controls</h2>
-			<p>Use swipe gestures to navigate pacman.</p>
-			<p>Alternatively use the Arrow Buttons underneath the game area to navigate pacman.</p>
-			<p>To pause / resume the game, touch the game area once.</p>
+			<h2>Controles</h2>
+			<p>Utilice gestos de deslizamiento para manejar Pacman.</p>
+			<p>Alternativamente, use los botones de flecha debajo del área del juego para manejar Pacman.</p>
+			<p>Para pausar / reanudar el juego, toque el área del juego una vez.</p>
 		</div>
 
 		<div>
-			<h2>Ghosts</h2>
-			<p>Ghosts are creatures that hunt pacman and will kill him if they catch him.</p>
-			<p>Every ghost has its own strategy to chase down pacman.</p>
+			<h2>Fantasmas</h2>
+			<p>Los fantasmas son criaturas que cazan a Pacman y lo matarán si lo atrapan.</p>
+			<p>Cada fantasma tiene su propia estrategia para perseguir a Pacman.</p>
 			<h3>Inky<img src="img/inky.svg" class="pull-right"></h3>
-			Inky will stay in the ghost house until pacman has eaten at least 30 pills.	His home is the bottom right corner.
+			Inky permanecerá en la casa fantasma hasta que Pacman haya comido al menos 30 pastillas. Su casa está en la esquina inferior derecha.
 			<h3>Blinky <img src="img/blinky.svg" class="pull-right"></h3>
-			Blinky is the most agressive of the 4 ghosts. He will start chasing pacman right away, and aim directly at him. His home is the upper right corner.
+			Blinky es el más agresivo de los 4 fantasmas. Comenzará a perseguir a Pacman de inmediato y apuntará directamente a él. Su casa es la esquina superior derecha.
 			<h3>Pinky<img src="img/pinky.svg" class="pull-right"></h3>
-			Pinky will start chasing pacman right away, he will always aim 4 fields ahead and 4 fields left of pacman. His home is the upper left corner.
+			Pinky comenzará a perseguir a Pacman de inmediato, siempre apuntará 4 campos hacia adelante y 4 campos a la izquierda de Pacman. Su casa es la esquina superior izquierda.
 			<h3>Clyde<img src="img/clyde.svg" class="pull-right"></h3>
-			Inky will stay in the ghost house until pacman has eaten at least 2/3 of all pills. His home is the bottom left corner.
+			Inky permanecerá en la casa fantasma hasta que Pacman haya comido al menos 2/3 de todas las pastillas. Su casa es la esquina inferior izquierda.
 		</div>
 
 		<div>
-			<h2>Ghost moods</h2>
-			The ghosts have two different moods that change the way they act during the game.
-			<h3>Scatter mood</h3>
-			<p>This is the default mood. When ghosts are in scatter mood, they will just go to their home corner and stay there.</p>
+			<h2>Estados de ánimo fantasma</h2>
+			Los fantasmas tienen dos estados de ánimo diferentes que cambian su forma de actuar durante el juego.
+			<h3>Estado de ánimo disperso</h3>
+			<p>Este es el estado de ánimo predeterminado. Cuando los fantasmas están de humor disperso, simplemente irán a la esquina de su hogar y se quedarán allí.</p>
 			<img src="img/instructions/instructions_scatter.PNG">
-			<h3>Chase mood</h3>
-			<p>After a certain time the ghosts change their mood and want to go chasing pacman. This is indicated through the walls turning red.</p>
+			<h3>Estado de ánimo de persecución</h3>
+			<p>Después de un tiempo, los fantasmas cambian de humor y quieren ir a perseguir a Pacman. Esto se indica a través de las paredes que se vuelven rojas.</p>
 			<img src="img/instructions/instructions_chase.PNG">
 		</div>
 
 		<div>
-			<h2>Items</h2>
-			<h3>Pills</h3>
-			<p>The goal of every level is, to eat all the white pills without getting catched by the ghosts. One pill results in 10 points.</p>
-			<h3>Powerpills</h3>
-			<p>In every level there are 4 powerpills, which are a bit bigger than the regular ones. If Pacman eats those, he will get strong enough to eat the ghosts. You can see this indicated by the ghosts turning blue. One powerpill results in 50 points.</p>
+			<h2>Objetos</h2>
+			<h3>Píldoras</h3>
+			<p>El objetivo de cada nivel es comerse todas las píldoras blancas sin ser atrapado por los fantasmas. Una pastilla da como resultado 10 puntos.</p>
+			<h3>Píldoras de Poder</h3>
+			<p>En cada nivel hay 4 píldoras de poder, que son un poco más grandes que las normales. Si Pacman se los come, se volverá lo suficientemente fuerte como para comerse a los fantasmas. Puedes ver esto indicado por los fantasmas que se vuelven azules. Una píldora de poder da como resultado 50 puntos.</p>
 			<img src="img/instructions/instructions_powerpill.PNG">
-			<p>Eating a ghost results in 100 points. The soul of the ghost will return to the ghost house before starting to chase Pacman again.</p>
+			<p>Comer un fantasma da como resultado 100 puntos. El alma del fantasma regresará a la casa fantasma antes de comenzar a perseguir a Pacman nuevamente.</p>
 		</div>
 
 	</div>
@@ -151,13 +151,13 @@
 
 <!-- Info -->
 <div class="content" id="info-content">
-	<div class="button" id="back">&lt; back</div>
+	<div class="button" id="back">&lt; atrás</div>
 	<div>
-		<h1>Info</h1>
-		<p>Current Version: 0.91 (15.01.2016) (<a href="#" id="updateCode">get latest</a>)</p>
+		<h1>Información</h1>
+		<p>Versión actual: 0.91 (15.01.2016) (<a href="#" id="updateCode">Obtener la última</a>)</p>
 		<img src="img/platzh1rsch-logo.png">
-		<p>Pacman Canvas is Open Source, written by <a href="http://platzh1rsch.ch">platzh1rsch</a>. You can get the code on <a target="_blank" href="https://github.com/platzhersh/pacman-canvas" target="_blank">github</a>.</p>
-		<p>If you have any suggestions how to make this app better, please post your suggestion / request on <a target="_blank" href="https://platzh1rsch.uservoice.com/">uservoice</a>.</p>
+		<p>Pacman Canvas es de código abierto, escrito por <a href="http://platzh1rsch.ch">platzh1rsch</a>. Puede obtener el código en <a target="_blank" href="https://github.com/platzhersh/pacman-canvas" target="_blank">github</a>.</p>
+		<p>Si tiene alguna sugerencia sobre cómo mejorar esta aplicación, publique su sugerencia / solicitud en <a target="_blank" href="https://platzh1rsch.uservoice.com/">uservoice</a>.</p>
 		<p>
 	</div>
 </div>
@@ -183,9 +183,9 @@
 	<!-- main game content -->
 	<div class="game wrapper">
 	
-		<div class="score">Score:</div>
-		<div class="level">Lvl:</div>
-		<div class="lives">Lives: </div>
+		<div class="score">Puntuación:</div>
+		<div class="level">Nivel:</div>
+		<div class="lives">Vidas: </div>
 		
 		<div class="controlSound">
 			<img src="img/audio-icon-mute.png" id="mute">
@@ -194,8 +194,8 @@
 		<div id="canvas-container">
 			<div id="canvas-overlay-container">
 				<div id="canvas-overlay-content">
-					<div id="title">Pacman Canvas</div>
-					<div><p id="text">Click to Play</p></div>
+					<div id="title">Pacman CreActiva</div>
+					<div><p id="text">Click para Jugar</p></div>
 				</div>
 			</div>
 			<canvas id="myCanvas" width="540" height="390">
@@ -224,10 +224,10 @@
 		<!-- Game Menu -->		
 		<div class="controls" id="menu-buttons">
 			<ul>
-				<li class="button" id="newGame">New Game</li>
-				<li class="button" id="highscore">Highscore</li>
-				<li class="button" id="instructions">Instructions</li>
-				<li class="button" id="info">Info</li>
+				<li class="button" id="newGame">Nuevo Juego</li>
+				<li class="button" id="highscore">Altos Puntajes</li>
+				<li class="button" id="instructions">Instrucciones</li>
+				<li class="button" id="info">Información</li>
 			</ul>
 			
 		</div>
@@ -237,7 +237,7 @@
 		
 	<div class="description nomobile">
 		<p>This whole thing was written in HTML5, CSS3 and Javascript (using small bits of jquery). For the basics I was following the <a href="http://devhammer.net/blog/exploring-html5-canvas-part-1---introduction" target="_blank">"Exploring HTML5 Canvas"</a> Tutorials (Part 1 - 6) by Devhammer. Thanks for the great Tutorial!</a>
-		<p>For some other stuff, like how to write objectorientated javascript I was following the tutorials over at <a href="http://www.codecademy.com/" target="_blank">http://www.codecademy.com/</a>, which is a really great site to learn Javascript and also other languages.</a>
+		<p>For some other stuff, like how to write objectorientated javascript I was following the tutorials over at <a href="https://www.codecademy.com/" target="_blank">http://www.codecademy.com/</a>, which is a really great site to learn Javascript and also other languages.</a>
 		<p>If you understand German you can also read my blogpost about this site: <a href="http://blog.platzh1rsch.ch/2012/08/pacman-in-html5-canvas.html">"Pacman in HTML5 Canvas"</a>.</p>
 		
 		<span id="audio">
